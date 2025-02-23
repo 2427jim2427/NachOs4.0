@@ -72,12 +72,10 @@ void Priority_update(Thread *thread){
 
 Scheduler::Scheduler()
 { 
-    // L2 = new List<Thread *>; 
     L2 = new SortedList<Thread *>(compareP);
     L1 = new SortedList<Thread *>(compareB);
-    // L3 = new SortedList<Thread *>(compareF);
     L3 = new List<Thread *>; 
-    // priorityQueue = new List<Thread *>;
+
     toBeDestroyed = NULL;
 } 
 
